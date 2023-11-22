@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation au Restaurant</title>
+    <style>
+        body {
+            background-color: #f7e7da;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        #invitation {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d35400;
+        }
+
+        p {
+            color: #333333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #oui-button {
+            color: #ffffff;
+            background-color: #27ae60;
+        }
+
+        #non-button {
+            color: #ffffff;
+            background-color: #c0392b;
+            margin-left: 10px;
+            /* Ajout de marge entre les boutons */
+        }
+
+        #reponse {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="invitation">
+        <h1>Invitation</h1>
+        <p>Chère Pierre</p>
+        <p>j'ai passé un très bon moment avec toi,j'aimerais refaire ça une autre fois et partager d'autre moment
+            ensemble.</p>
+        <img id="flower-image" src="red-roses.jpeg" alt="Fleurs romantiques">
+        <p>Acceptes-tu mon invitation?</p>
+        <a id="oui-button" class="cta-button" href="#">Oui</a>
+        <a id="non-button" class="cta-button" href="#">Non</a>
+
+        <!-- Ajout de l'élément pour afficher la réponse -->
+        <p id="reponse"></p>
+    </div>
+
+    <script>
+        function repondreOui() {
+            document.getElementById("reponse").innerText = "Merci pour votre réponse positive !";
+        }
+
+        function repondreNon() {
+            document.getElementById("reponse").innerText = "Dommage, peut-être une prochaine fois !";
+        }
+
+        var boutonOui = document.getElementById("oui-button");
+        var boutonNon = document.getElementById("non-button");
+
+        boutonOui.addEventListener("click", repondreOui);
+        boutonNon.addEventListener("click", repondreNon);
+    </script>
+
+</body>
+
+</html>
